@@ -46,14 +46,14 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     vendor.qti.hardware.wifi.supplicant-V1-ndk.vendor
 
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/wlan/qcwcn
 
 # Enable IEEE 802.11ax support
 CONFIG_IEEE80211AX := true
 
 # IPACM
-PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
-$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)/data-ipa-cfg-mgr
+$(call inherit-product, hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
 # Include QCOM WLAN makefiles.
 ifeq ($(call is-board-platform-in-list,sdm845),true)

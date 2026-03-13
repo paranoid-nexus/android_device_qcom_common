@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
     init.vendor.wlan.rc
 endif
 
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/wlan/qcwcn
 
 # Enable IEEE 802.11ax support
 ifeq ($(call is-board-platform-in-list, $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)),true)
@@ -51,8 +51,8 @@ CONFIG_IEEE80211AX := true
 endif
 
 # IPACM
-PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
-$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy/ipacm_vendor_product.mk)
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um/ipacm_vendor_product.mk)
 
 # Include QCOM WLAN makefiles.
 ifeq ($(call is-board-platform-in-list,sdm845),true)

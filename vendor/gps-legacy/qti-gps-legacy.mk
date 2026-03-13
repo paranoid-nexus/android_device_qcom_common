@@ -13,7 +13,8 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.3
 
 # Inherit the GPS HAL.
-$(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/gps-legacy
+$(call inherit-product-if-exists, hardware/qcom-caf/gps-legacy/gps_vendor_product.mk)
 
 # Manifest
 DEVICE_MANIFEST_FILE += \
