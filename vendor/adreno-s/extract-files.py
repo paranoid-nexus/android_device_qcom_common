@@ -12,7 +12,8 @@ from extract_utils_qti.fixups_lib import lib_fixup_vendor_suffix
 from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 
 namespace_imports = [
-    'hardware/qcom/display/gralloc',
+    'hardware/qcom-caf/sm8450',
+    'vendor/qcom/opensource/display',
 ]
 
 lib_fixups: lib_fixups_user_type = {

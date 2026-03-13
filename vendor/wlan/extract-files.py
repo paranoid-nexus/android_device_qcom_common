@@ -14,6 +14,10 @@ from extract_utils.main import ExtractUtils
 
 from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 
+namespace_imports = [
+    'hardware/qcom-caf/wlan',
+]
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
@@ -28,6 +32,7 @@ lib_fixups: lib_fixups_user_type = {
 module = ExtractUtilsQTIModule(
     'wlan',
     QTIComponentType.VENDOR,
+    namespace_imports=namespace_imports,
     lib_fixups=lib_fixups,
 )
 
