@@ -47,7 +47,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.product.property_source_order=odm,vendor,product,system_ext,system
 
 # Power
-ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+ifeq ($(filter perf,$(TARGET_COMMON_QTI_COMPONENTS)),perf)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
 endif
 
