@@ -3,6 +3,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Include qcom defs
+include hardware/qcom-caf/common/qcom_platform_defs.mk
+
 # AV
 TARGET_USES_AOSP_FOR_AUDIO ?= false
 TARGET_USES_QCOM_MM_AUDIO := true

@@ -36,7 +36,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
-ifeq ($(call is-board-platform-in-list, $(3_18_FAMILY) $(4_4_FAMILY) $(4_9_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list, $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY)),true)
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.enableadvancedscan=false
 else

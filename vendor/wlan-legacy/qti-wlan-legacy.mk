@@ -46,7 +46,7 @@ endif
 PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
 
 # Enable IEEE 802.11ax support
-ifeq ($(call is-board-platform-in-list, $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list, $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)),true)
 CONFIG_IEEE80211AX := true
 endif
 
